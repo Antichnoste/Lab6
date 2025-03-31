@@ -1,0 +1,4 @@
+2025-03-31 18:18:39 [main] DEBUG test1 - Debug message
+2025-03-31 18:18:39 [main] INFO  test1 - Info message
+2025-03-31 18:18:39 [main] WARN  test1 - Warning message
+2025-03-31 18:18:39 [main] ERROR test1 - Error message
