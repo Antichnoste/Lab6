@@ -11,6 +11,9 @@ import utility.StandartConsole;
 import java.io.IOException;
 
 
+/**
+ * Главный класс для серверного приложения
+ */
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
@@ -33,21 +36,21 @@ public class Main {
 
         CommandManager commandManager = new CommandManager() {
             {
-            register("add", new Add(console, collectionManager));
-            register("help", new Help(console, this));
-            register("exit", new Exit(console));
+            register("add", new Add(console, collectionManager)); //OK
+            register("help", new Help(console, this)); //OK
+            register("exit", new Exit(console)); //OK
             register("average_of_oscars_count", new AverageOfOscarsCount(console, collectionManager));
-            register("clear", new Clear(console, collectionManager));
-            register("execute_script", new ExecuteScript(console));
+            register("clear", new Clear(console, collectionManager)); //OK
+            register("execute_script", new ExecuteScript(console)); //OK
             register("filter_contains_name", new FilterContainsName(console, collectionManager));
-            register("history", new History(console, this));
+            register("history", new History(console, this));// OK
             register("filter_starts_with_tagline", new FilterStartsWithTagline(console, collectionManager));
-            register("info", new Info(console, collectionManager));
-            register("remove_by_id", new RemoveById(console,collectionManager ));
+            register("info", new Info(console, collectionManager)); // OK
+            register("remove_by_id", new RemoveById(console,collectionManager )); // OK
             register("remove_first", new RemoveFirst(console, collectionManager));
             register("remove_greater", new RemoveGreater(console, collectionManager));
-            register("save", new Save(console, collectionManager));
-            register("show", new Show(console, collectionManager));
+            register("save", new Save(console, collectionManager)); // OK
+            register("show", new Show(console, collectionManager)); // OK
             register("update", new UpdateID(console, collectionManager));
         }
         };
